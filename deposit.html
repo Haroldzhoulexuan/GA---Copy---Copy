@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit - Fradel and Spies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html">Fin-Buddy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MY WALLET
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="wallet.html">Wallet Overview</a></li>
+                            <li><a class="dropdown-item" href="deposit.html">Deposit</a></li>
+                            <li><a class="dropdown-item" href="payment.html">Make a Payment</a></li>
+                            <li><a class="dropdown-item" href="transactions.html">Transaction History</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container my-5">
+    <h1 class="text-center">Deposit Funds</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Deposit SGD</h2>
+                    <form id="deposit-sgd-form">
+                        <div class="form-group">
+                            <label for="sgd-deposit-amount">Amount:</label>
+                            <input type="text" id="sgd-deposit-amount" name="sgd-deposit-amount" class="form-control" required>
+                        </div>
+                        <button type="button" id="deposit-sgd-button" class="btn btn-primary mt-2">Deposit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Deposit Cryptocurrency</h2>
+                    <form id="deposit-form">
+                        <div class="form-group">
+                            <label for="crypto-deposit-amount">Amount:</label>
+                            <input type="text" id="crypto-deposit-amount" name="crypto-deposit-amount" class="form-control" required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="crypto-deposit-type">Cryptocurrency:</label>
+                            <select id="crypto-deposit-type" name="crypto-deposit-type" class="form-control" required>
+                                <option value="bitcoin">Bitcoin</option>
+                                <!--<option value="ethereum">Ethereum</option>-->
+                            </select>
+                        </div>
+                        <button type="button" id="deposit-button" class="btn btn-primary mt-2">Deposit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="scriptwallet.js"></script>
+</div>
+</body>
+</html>

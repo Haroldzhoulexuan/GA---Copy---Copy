@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Payment - Fradel and Spies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Fin-Buddy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MY WALLET
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="wallet.html">Wallet Overview</a></li>
+                            <li><a class="dropdown-item" href="deposit.html">Deposit</a></li>
+                            <li><a class="dropdown-item" href="payment.html">Make a Payment</a></li>
+                            <li><a class="dropdown-item" href="transactions.html">Transaction History</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container my-5">
+    <h1 class="text-center">Make a Payment</h1>
+    <div class="card mb-4">
+        <div class="card-body">
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" class="form-control" required>
+                        <option value="e-wallet">E-Wallet</option>
+                        <option value="crypto">Cryptocurrency</option>
+                    </select>
+                </div>
+                <div id="e-wallet-section" class="form-group" style="display: block;">
+                    <label for="e-wallet">E-Wallet:</label>
+                    <input type="text" id="e-wallet" name="e-wallet" class="form-control">
+                </div>
+                <div id="crypto-section" class="form-group" style="display: none;">
+                    <label for="crypto-address">Crypto Address:</label>
+                    <input type="text" id="crypto-address" name="crypto-address" class="form-control" placeholder="Your crypto address">
+                    <label for="crypto-type" class="mt-2">Cryptocurrency:</label>
+                    <select id="crypto-type" name="crypto-type" class="form-control">
+                        <option value="BTC">Bitcoin</option>
+                    </select>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="recipient">Recipient:</label>
+                    <input type="text" id="recipient" name="recipient" class="form-control" required placeholder="Recipient's address">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="ticket-price">Amount:</label>
+                    <input type="text" id="ticket-price" name="ticket-price" class="form-control" required>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="currency">Currency:</label>
+                    <select id="currency" name="currency" class="form-control" required>
+                        <option value="SGD">SGD</option>
+                    </select>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="transaction-date">Date:</label>
+                    <input type="date" id="transaction-date" name="transaction-date" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" class="form-control" placeholder="Optional description"></textarea>
+                </div>
+                <button type="button" id="pay-button" class="btn btn-primary mt-2">Pay Now</button>
+            </form>
+        </div>
+    </div>
+    <div id="message-container"></div> <!-- Container for messages -->
+</div>
+<script src="scriptwallet.js"></script>
+</body>
+</html>

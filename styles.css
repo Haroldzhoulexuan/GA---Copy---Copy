@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3e7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #eff2e0;
+    padding: 20px;
+    text-align: center;
+}
+
+header .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    padding: 50px;
+}
+
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#message-container {
+    margin-top: 20px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.transaction {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.transaction h3 {
+    margin: 0 0 10px;
+}
+
+.transaction p {
+    margin: 0 0 5px;
+}
+
+.transaction .btn {
+    margin-top: 10px;
+}

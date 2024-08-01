@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamless Payment with E-Wallet</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <h1>Buy Air Ticket</h1>
+    </header>
+    <section id="payment">
+        <h2>Payment Details</h2>
+        <form id="payment-form">
+            <label for="ticket-price">Ticket Price:</label>
+            <input type="text" id="ticket-price" value="$500" readonly><br><br>
+            <label for="e-wallet">Choose E-Wallet:</label>
+            <select id="e-wallet">
+                <option value="paypal">PayPal</option>
+                <option value="stripe">Stripe</option>
+                <option value="square">Square</option>
+            </select><br><br>
+            <button type="button" id="pay-button">Pay with E-Wallet</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 FinTech Solutions</p>
+    </footer>
+    <script src="scripts2.js"></script>
+</body>
+</html>
